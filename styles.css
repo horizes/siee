@@ -303,24 +303,22 @@
 
   .hero h1.motto .line-3{
     animation:motto-rise 0.8s cubic-bezier(.16,.84,.44,1) 0.44s forwards,
-              shimmer 3.6s linear 1.4s infinite;
+              glow-pulse 3.4s ease-in-out 1.3s infinite;
     font-size:clamp(40px, 6.8vw, 64px);
     font-weight:600;
     letter-spacing:0.01em;
     margin-top:12px;
-    background:linear-gradient(90deg, var(--gold-dim), var(--gold-light), var(--gold-dim));
-    background-size:220% auto;
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
+    color:var(--gold-light);
+    will-change:text-shadow;
   }
 
   @keyframes motto-rise{
     to{ opacity:1; transform:translateY(0); }
   }
 
-  @keyframes shimmer{
-    to{ background-position:-220% center; }
+  @keyframes glow-pulse{
+    0%,100%{ text-shadow:0 0 0 rgba(230,198,90,0); }
+    50%{ text-shadow:0 0 18px rgba(230,198,90,0.55); }
   }
 
   .hero p.lede{
@@ -943,7 +941,7 @@
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important; scroll-behavior:auto !important; animation-duration:0.01ms !important; animation-iteration-count:1 !important;}
     .hero h1.motto .line{animation:none !important; opacity:1 !important; transform:none !important;}
-    .hero h1.motto .line-3{background:none !important; -webkit-text-fill-color:initial !important; color:var(--gold-light) !important;}
+    .hero h1.motto .line-3{text-shadow:none !important; color:var(--gold-light) !important;}
     .hero p.lede, .hero .cta-row{animation:none !important; opacity:1 !important; transform:none !important;}
     .hero::before{animation:none !important;}
     .about-feature-icon{animation:none !important;}

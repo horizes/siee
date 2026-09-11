@@ -145,6 +145,24 @@
 })();
 
 (function(){
+  // Clicar na logo do cabeçalho leva de volta ao topo da página.
+  var brand = document.getElementById('brandLogo');
+  if(!brand) return;
+
+  function goTop(){
+    window.scrollTo({ top:0, behavior:'smooth' });
+  }
+
+  brand.addEventListener('click', goTop);
+  brand.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      goTop();
+    }
+  });
+})();
+
+(function(){
   // Revelação ao rolar a página. A classe .js-reveal só é adicionada aqui;
   // sem JavaScript os elementos .reveal/.reveal-rule permanecem sempre
   // visíveis (ver CSS), então o conteúdo nunca fica escondido por engano.

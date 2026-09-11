@@ -194,6 +194,7 @@
   .brand{
     display:flex;
     align-items:center;
+    cursor:pointer;
   }
 
   .brand img{

@@ -264,7 +264,7 @@
 
   .hero-top{
     position:relative;
-    padding:80px 32px 56px;
+    padding:52px 32px 56px;
   }
 
   .hero-eyebrow{
@@ -287,7 +287,7 @@
     position:relative;
     border-bottom:1px solid var(--line);
     background:var(--black-soft);
-    padding:26px 0;
+    padding:14px 0;
     overflow:hidden;
     opacity:0;
     animation:fade-up 0.8s cubic-bezier(.16,.84,.44,1) 0.92s both;
@@ -1055,8 +1055,8 @@
     .nav-toggle{display:block; transition:transform 0.3s ease, color 0.2s;}
     .nav-toggle:hover{color:var(--gold-light);}
     .hero{padding:0;}
-    .hero-top{padding:64px 24px 40px;}
-    .hero-services{padding:20px 0;}
+    .hero-top{padding:44px 24px 40px;}
+    .hero-services{padding:12px 0;}
     section{padding:70px 0;}
   }
 

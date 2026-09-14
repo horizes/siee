@@ -587,6 +587,10 @@
     filter:blur(1.5px) brightness(0.62) saturate(0.95);
   }
 
+  .svc-bg--low{
+    background-position:center 32%;
+  }
+
   .svc-bg::after{
     content:"";
     position:absolute;
